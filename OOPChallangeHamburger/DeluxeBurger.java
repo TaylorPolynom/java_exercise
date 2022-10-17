@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package oop.challangeGitBurger;
+package OOPChallangeHamburger;
 
 /**
  *
  * @author Vekic
  */
 public class DeluxeBurger extends Burger{
-    private String chips;
-    private String drinks;
+    private String addition1;
+    private String addition2;
     private double price;
     public DeluxeBurger() {
         super("White bread","cow meet");
@@ -23,21 +23,21 @@ public class DeluxeBurger extends Burger{
     
     public void addAdditions(int num) {
         if(num==1){
-         this.chips="Chips";
+         this.addition1="Chips";
          price=this.getPrice()+2;
         }
         else if(num==2){
-        this.drinks="Coca Cola";
+        this.addition2="Coca Cola";
         price=this.getPrice()+1;
         }
     }
 
-    public String getChips() {
-        return chips;
+    public String getAddition1() {
+        return addition1;
     }
 
-    public String getDrinks() {
-        return drinks;
+    public String getAddition2() {
+        return addition2;
     }
 
     public double getPrice() {
@@ -46,7 +46,7 @@ public class DeluxeBurger extends Burger{
 
     @Override
     public String toString() {
-        return "DeluxeBurger{" +super.getMeat() +","+ "chips=" + chips + ", drinks=" + drinks + ", price=" + price + '}';
+        return "DeluxeBurger{"+"BreadType="+super.getBreadType()+" ,meat=" +super.getMeat() +","+ "addition1=" + getAddition1() + ", addition2=" + getAddition2() + ", price=" + price + '}';
     }
 
     
